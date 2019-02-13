@@ -6,7 +6,14 @@ module.exports = async function () {
     const globalCss = await loadCss();
     const browser = await puppeteer.launch({
         headless: true,
-        args: [`--no-sandbox`],
+        args: [
+            // Required for Docker version of Puppeteer
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            // This will write shared memory files into /tmp instead of /dev/shm,
+            // because Docker’s default for /dev/shm is 64MB
+            "--disable-dev-shm-usage",
+        ],
     });
 
     process.env.globalCss = globalCss;

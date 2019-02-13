@@ -4,10 +4,11 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:latest-browsers
     working_directory: ~/repo
 
     steps:
+      - run: google-chrome --version
       - checkout
       - allure/install
 
@@ -24,5 +25,5 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test
+      - run: yarn test -u
       - allure/report
