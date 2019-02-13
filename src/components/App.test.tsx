@@ -11,10 +11,9 @@ describe("App", () => {
         ReactDOM.unmountComponentAtNode(div);
     });
 
-    it('make a picture', async () => {
+    it('make a picture :)', async () => {
         const screenShot = await takeScreenshot({
             html: ReactDOMServer.renderToStaticMarkup(<App/>),
-            withHtml: true,
         });
 
         expect(screenShot).toMatchImageSnapshot();

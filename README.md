@@ -1,5 +1,7 @@
 # Progressive tests for complex frontend applications
 
+[![CircleCI](https://circleci.com/gh/zaqqaz/progressive-tests/tree/master.svg?style=svg)](https://circleci.com/gh/zaqqaz/progressive-tests/tree/master)
+
 Example project with Typescript/React.
 
 **Features:**
