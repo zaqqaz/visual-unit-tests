@@ -1,8 +1,8 @@
-import { mount } from "enzyme";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { takeScreenshot } from "../utils/testUtils";
+import ReactDOMServer from "react-dom/server";
 
 describe("App", () => {
     it('renders without crashing', () => {
@@ -13,7 +13,8 @@ describe("App", () => {
 
     it('make a picture', async () => {
         const screenShot = await takeScreenshot({
-            html: mount(<App/>).html(),
+            html: ReactDOMServer.renderToStaticMarkup(<App/>),
+            withHtml: true,
         });
 
         expect(screenShot).toMatchImageSnapshot();
