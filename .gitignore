@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 allure-results
 __image_snapshots__/local
+allure-report
+__diff_output__

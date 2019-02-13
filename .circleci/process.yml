@@ -1,0 +1,151 @@
+# Orb 'ayte/allure@0.1.2' resolved to 'ayte/allure@0.1.2'
+version: 2
+jobs:
+  build:
+    docker:
+    - image: circleci/node:latest-browsers
+    working_directory: ~/repo
+    steps:
+    - run:
+        command: google-chrome --version
+    - checkout
+    - run:
+        name: Allure archive download
+        command: curl -L http://repo2.maven.org/maven2/io/qameta/allure/allure-commandline/2.8.1/allure-commandline-2.8.1.zip
+          -o /tmp/allure.zip
+    - run:
+        name: Archive extraction
+        command: unzip /tmp/allure.zip
+    - run:
+        name: Allure installation
+        command: sudo mv allure-2.8.1 /usr/local/share/allure
+    - run:
+        name: Allure binary symlinking
+        command: sudo ln -s /usr/local/share/allure/bin/allure /usr/local/bin/allure
+    - restore_cache:
+        keys:
+        - v1-dependencies-{{ checksum "package.json" }}
+        - v1-dependencies-
+    - run:
+        command: yarn install
+    - save_cache:
+        paths:
+        - node_modules
+        key: v1-dependencies-{{ checksum "package.json" }}
+    - run:
+        command: yarn test
+    - run:
+        name: Generate report
+        when: on_fail
+        command: allure generate
+    - run:
+        name: Allure report generation (allure-results -> allure-report)
+        command: |
+          allure generate \
+            --config /usr/local/share/allure/config/allure.yml \
+            --report-dir allure-report \
+            allure-results
+    - store_artifacts:
+        path: allure-report
+        destination: Report/Allure
+  updateSnapshot:
+    docker:
+    - image: circleci/node:latest-browsers
+    working_directory: ~/repo
+    steps:
+    - run:
+        command: google-chrome --version
+    - checkout
+    - restore_cache:
+        keys:
+        - v1-dependencies-{{ checksum "package.json" }}
+        - v1-dependencies-
+    - run:
+        command: yarn install
+    - save_cache:
+        paths:
+        - node_modules
+        key: v1-dependencies-{{ checksum "package.json" }}
+    - run:
+        command: yarn test -u
+    - run:
+        command: git add .
+    - run:
+        command: git commit -m "CI. Update snapshot"
+    - run:
+        command: git push
+workflows:
+  version: 2
+  workflow:
+    jobs:
+    - build
+    - updateSnapshot
+
+# Original config.yml file:
+# version: 2.1
+# orbs:
+#   allure: ayte/allure@0.1.2
+# jobs:
+#   updateSnapshot:
+#     docker:
+#       - image: circleci/node:latest-browsers
+#     working_directory: ~/repo
+# 
+#     steps:
+#       - run: google-chrome --version
+#       - checkout
+# 
+#       - restore_cache:
+#           keys:
+#             - v1-dependencies-{{ checksum \"package.json\" }}
+#             - v1-dependencies-
+# 
+#       - run: yarn install
+# 
+#       - save_cache:
+#           paths:
+#             - node_modules
+#           key: v1-dependencies-{{ checksum \"package.json\" }}
+# 
+#       # run tests!
+#       - run: yarn test -u
+#       - run: git add .
+#       - run: git commit -m \"CI. Update snapshot\"
+#       - run: git push
+#   build:
+#     docker:
+#       - image: circleci/node:latest-browsers
+#     working_directory: ~/repo
+# 
+#     steps:
+#       - run: google-chrome --version
+#       - checkout
+#       - allure/install
+# 
+#       - restore_cache:
+#           keys:
+#             - v1-dependencies-{{ checksum \"package.json\" }}
+#             - v1-dependencies-
+# 
+#       - run: yarn install
+# 
+#       - save_cache:
+#           paths:
+#             - node_modules
+#           key: v1-dependencies-{{ checksum \"package.json\" }}
+# 
+#       # run tests!
+#       - run: yarn test
+# 
+#       - run:
+#           name: Generate report
+#           when: on_fail
+#           command: allure generate
+# 
+#       - allure/report
+# workflows:
+#   version: 2.1
+#   workflow:
+#     jobs:
+#     - build
+#     - updateSnapshot

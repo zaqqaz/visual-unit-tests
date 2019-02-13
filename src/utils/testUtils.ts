@@ -36,7 +36,6 @@ export async function takeScreenshot(props: TakeScreenshotProps) {
     const elementHandle = await page.$(selector);
 
     if (withHtml) {
-        // Avoid unhelpful errors `cannot read screenshot() of null`
         const dirname = path.resolve("__image_snapshots__/local/debug");
         const filename = path.join(dirname, Date.now() + ".html");
         mkdirp.sync(dirname);
