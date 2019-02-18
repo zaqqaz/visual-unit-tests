@@ -72,5 +72,9 @@ workflows:
     # On approval of the `hold` job, any successive job that requires the `hold` job will run.
     # In this case, a user is manually triggering the deploy job.
     - updateSnapshot:
+        filters:
+          branches:
+            ignore:
+              - master
         requires:
           - "Update snapshot?"
