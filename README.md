@@ -2,8 +2,6 @@
 
 [![CircleCI](https://circleci.com/gh/zaqqaz/progressive-tests/tree/master.svg?style=svg)](https://circleci.com/gh/zaqqaz/progressive-tests/tree/master)
 
-![Visual test](https://user-images.githubusercontent.com/2823336/52945456-71377f80-337a-11e9-8eed-08997fa53740.png)
-
 <img width="1418" alt="Visual unit tests allure report" src="https://user-images.githubusercontent.com/2823336/52945569-b0fe6700-337a-11e9-95e1-6ac624ef018b.png">
 
 Example project with Typescript/React.
