@@ -1,6 +1,6 @@
 # How to set up a pipeline with visual unit tests for your application
 
-[![CircleCI](https://circleci.com/gh/zaqqaz/progressive-tests/tree/master.svg?style=svg)](https://circleci.com/gh/zaqqaz/progressive-tests/tree/master)
+[![CircleCI](https://circleci.com/gh/zaqqaz/visual-unit-tests/tree/master.svg?style=svg)](https://circleci.com/gh/zaqqaz/visual-unit-tests/tree/master)
 
 <img width="1418" alt="Visual unit tests allure report" src="https://user-images.githubusercontent.com/2823336/52945569-b0fe6700-337a-11e9-95e1-6ac624ef018b.png">
 
