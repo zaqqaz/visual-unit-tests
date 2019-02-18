@@ -1,8 +1,7 @@
 import Adapter from "enzyme-adapter-react-16";
 import { configure } from "enzyme";
-
-const { registerAllureImageSnapshot } = require("jest-allure-image-snapshot");
-require("jest-allure/dist/setup");
+import { registerAllureImageSnapshot } from "jest-allure-image-snapshot";
+import "jest-allure/dist/setup";
 
 configure({ adapter: new Adapter() });
 

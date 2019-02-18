@@ -5427,10 +5427,10 @@ istanbul-reports@^1.5.1:
   dependencies:
     handlebars "^4.0.3"
 
-jest-allure-image-snapshot@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.npmjs.org/jest-allure-image-snapshot/-/jest-allure-image-snapshot-0.0.9.tgz#b1e84c18d2dacc7234eb1e8f463cbecc109d7920"
-  integrity sha512-NFsPa81ztIMWgIA0YwfyffFYh8Fy5GkRai/yXs6vvqjALVoE+TvWmmlGSXIXZ7pe/SKQByDYm6sqhk6DHf3uyA==
+jest-allure-image-snapshot@0.0.10:
+  version "0.0.10"
+  resolved "https://registry.npmjs.org/jest-allure-image-snapshot/-/jest-allure-image-snapshot-0.0.10.tgz#7c39d6451be6fec1f60f89fec0b8f75439ac20c8"
+  integrity sha512-uMkmgoxI77ALvBFpQqpwAYZGPXrH+5hBaT8RoPnlrt+LG7kXW7erU1ibF66JKSWMIIAULvfFyx3kc+W4x2EcnA==
   dependencies:
     chalk "^2.4.1"
     dynamicpixelmatch "^0.0.2"

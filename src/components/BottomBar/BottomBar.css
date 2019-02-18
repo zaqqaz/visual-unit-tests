@@ -1,0 +1,28 @@
+.BottomBar {
+    background: #fff;
+    box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.10);
+    height: 10vh;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+}
+
+.BottomBarItem {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.BottomBarItem.active {
+    background: rgba(0, 0, 0, 0.10);
+}
+
+.BottomBarItem:last-child {
+    border-right: none;
+}
+
+.BottomBarItem svg {
+    height: 60%;
+}
