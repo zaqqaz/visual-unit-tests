@@ -68,9 +68,13 @@ workflows:
     jobs:
     - build
     - "Update snapshot?": # <<< A job that will require manual approval in the CircleCI web application.
-        type: approval # <<< This key-value pair will set your workflow to a status of "On Hold"
-    # On approval of the `hold` job, any successive job that requires the `hold` job will run.
-    # In this case, a user is manually triggering the deploy job.
+        filters:
+          branches:
+            ignore: # <<< No needed on master branch
+              - master
+        type: approval # <<< This key-value pair will set your workflow to a status of "Update snapshot?"
+    # On approval of the `Update snapshot?` job, any successive job that requires the `Update snapshot?` job will run.
+    # In this case, a user is manually triggering the updateSnapshot job.
     - updateSnapshot:
         filters:
           branches:
