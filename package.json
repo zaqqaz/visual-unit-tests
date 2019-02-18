@@ -42,7 +42,7 @@
   "devDependencies": {
     "@types/puppeteer": "^1.12.1",
     "jest-allure": "^0.1.1",
-    "jest-allure-image-snapshot": "^0.0.9",
+    "jest-allure-image-snapshot": "0.0.10",
     "puppeteer": "1.11.0"
   }
 }

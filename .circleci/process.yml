@@ -6,8 +6,6 @@ jobs:
     - image: circleci/node:latest-browsers
     working_directory: ~/repo
     steps:
-    - run:
-        command: google-chrome --version
     - checkout
     - run:
         name: Allure archive download
@@ -90,23 +88,23 @@ workflows:
 #     docker:
 #       - image: circleci/node:latest-browsers
 #     working_directory: ~/repo
-# 
+#
 #     steps:
 #       - run: google-chrome --version
 #       - checkout
-# 
+#
 #       - restore_cache:
 #           keys:
 #             - v1-dependencies-{{ checksum \"package.json\" }}
 #             - v1-dependencies-
-# 
+#
 #       - run: yarn install
-# 
+#
 #       - save_cache:
 #           paths:
 #             - node_modules
 #           key: v1-dependencies-{{ checksum \"package.json\" }}
-# 
+#
 #       # run tests!
 #       - run: yarn test -u
 #       - run: git add .
@@ -116,32 +114,32 @@ workflows:
 #     docker:
 #       - image: circleci/node:latest-browsers
 #     working_directory: ~/repo
-# 
+#
 #     steps:
 #       - run: google-chrome --version
 #       - checkout
 #       - allure/install
-# 
+#
 #       - restore_cache:
 #           keys:
 #             - v1-dependencies-{{ checksum \"package.json\" }}
 #             - v1-dependencies-
-# 
+#
 #       - run: yarn install
-# 
+#
 #       - save_cache:
 #           paths:
 #             - node_modules
 #           key: v1-dependencies-{{ checksum \"package.json\" }}
-# 
+#
 #       # run tests!
 #       - run: yarn test
-# 
+#
 #       - run:
 #           name: Generate report
 #           when: on_fail
 #           command: allure generate
-# 
+#
 #       - allure/report
 # workflows:
 #   version: 2.1
