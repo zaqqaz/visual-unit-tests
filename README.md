@@ -6,8 +6,6 @@
 
 <img width="1418" alt="Visual unit tests allure report" src="https://user-images.githubusercontent.com/2823336/52945569-b0fe6700-337a-11e9-95e1-6ac624ef018b.png">
 
-![ee4aaa2a5fb1c4](https://user-images.githubusercontent.com/2823336/52945456-71377f80-337a-11e9-8eed-08997fa53740.png)
-
 Example project with Typescript/React.
 
 **Features:**
