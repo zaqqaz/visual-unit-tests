@@ -2,6 +2,7 @@ import puppeteer from "puppeteer";
 import path from "path";
 import mkdirp from "mkdirp";
 import fs from "fs";
+import request from "request";
 
 export async function getBrowser() {
     const browser = await puppeteer.connect({
@@ -87,4 +88,18 @@ export function htmlForScreenshot(body: any) {
         </body>
         </html>
     `;
+}
+
+export function takeScreenshotFromAWS(props: TakeScreenshotProps) {
+    return new Promise((resolve, reject) => {
+        request.post(
+            "https://localhost:4501/screenshot.png",
+            { json: { ...props, html: htmlForScreenshot(props.html) }, encoding: null },
+            function (error: any, response: any, body: any) {
+                if (!error && response.statusCode == 200) {
+                    resolve(Buffer.from(body, 'base64'));
+                }
+            }
+        );
+    });
 }
