@@ -2,6 +2,13 @@
 
 [![CircleCI](https://circleci.com/gh/zaqqaz/visual-unit-tests/tree/master.svg?style=svg)](https://circleci.com/gh/zaqqaz/visual-unit-tests/tree/master)
 
+Demo project with Typescript/React/Jest.
+
+**Features:**
+ - Nice reports with [jest-allure](https://github.com/zaqqaz/jest-allure)
+ - Screenshots tests with [puppeteer](https://github.com/GoogleChrome/puppeteer) & [jest-allure-image-snapshot](https://github.com/zaqqaz/jest-allure-image-snapshot)
+ - CircleCi integration
+ 
 ### [Presentation slides](https://denis.by/visual-tests/)
 <a href="https://denis.by/visual-tests/" target="_blank">
  <img width="450" src="https://user-images.githubusercontent.com/2823336/53030012-b808a080-3472-11e9-953c-a9c225e44e0b.png">
@@ -12,13 +19,6 @@
 **Report example:**
 
 <img width="450" alt="Visual unit tests allure report" src="https://user-images.githubusercontent.com/2823336/52945569-b0fe6700-337a-11e9-95e1-6ac624ef018b.png">
-
-Example project with Typescript/React.
-
-**Features:**
- - Nice reports with [jest-allure](https://github.com/zaqqaz/jest-allure)
- - Screenshots tests with [puppeteer](https://github.com/GoogleChrome/puppeteer) & [jest-allure-image-snapshot](https://github.com/zaqqaz/jest-allure-image-snapshot)
- - CircleCi integration
 
 ### Available Scripts
 
