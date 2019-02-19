@@ -5,7 +5,7 @@
 ### [Presentation slides](https://denis.by/visual-tests/)
 <img width="450" src="https://user-images.githubusercontent.com/2823336/53030012-b808a080-3472-11e9-953c-a9c225e44e0b.png">
 
->During this talk we’ll discuss why we bet on visual unit tests. On a real example we’ll discover how to implement such tests for *React* application with *Jest* and *Puppeteer*, we’ll meet *Allure report* with Jest and in the end set up the full pipeline with *CircleCi* and GitHub to run our own visual tests on each pull request. Also we’ll consider performance and some tricky parts.
+>During this talk we’ll discuss why we bet on visual unit tests. On a real example we’ll discover how to implement such tests for **React** application with **Jest** and **Puppeteer**, we’ll meet **Allure report** with Jest and in the end set up the full pipeline with **CircleCi** and GitHub to run our own visual tests on each pull request. Also we’ll consider performance and some tricky parts.
 
 **Report example:**
 
@@ -16,6 +16,7 @@ Example project with Typescript/React.
 **Features:**
  - Nice reports with [jest-allure](https://github.com/zaqqaz/jest-allure)
  - Screenshots tests with [puppeteer](https://github.com/GoogleChrome/puppeteer) & [jest-allure-image-snapshot](https://github.com/zaqqaz/jest-allure-image-snapshot)
+ - CircleCi integration
 
 ### Available Scripts
 
