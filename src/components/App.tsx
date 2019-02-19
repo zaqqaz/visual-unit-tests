@@ -18,7 +18,7 @@ class App extends React.PureComponent {
                 <div className={"Content"}>
                     <div className={"BurgerContainer"}>
                         {activeItem === BottomBarItems.HotDog && (
-                            <div className={"HotDogContainer"}>Just a hot dog
+                            <div className={"HotDogContainer"}>Just a visual test :)
                                 <HotDog/>
                             </div>
                         )}
