@@ -3,12 +3,13 @@
 [![CircleCI](https://circleci.com/gh/zaqqaz/visual-unit-tests/tree/master.svg?style=svg)](https://circleci.com/gh/zaqqaz/visual-unit-tests/tree/master)
 
 ### [Presentation slides](https://denis.by/visual-tests/)
-<img width="400" src="https://user-images.githubusercontent.com/2823336/53030012-b808a080-3472-11e9-953c-a9c225e44e0b.png">
+<img width="450" src="https://user-images.githubusercontent.com/2823336/53030012-b808a080-3472-11e9-953c-a9c225e44e0b.png">
 
 >During this talk we’ll discuss why we bet on visual unit tests. On a real example we’ll discover how to implement such tests for *React* application with *Jest* and *Puppeteer*, we’ll meet *Allure report* with Jest and in the end set up the full pipeline with *CircleCi* and GitHub to run our own visual tests on each pull request. Also we’ll consider performance and some tricky parts.
 
 **Report example:**
-<img width="400" alt="Visual unit tests allure report" src="https://user-images.githubusercontent.com/2823336/52945569-b0fe6700-337a-11e9-95e1-6ac624ef018b.png">
+
+<img width="450" alt="Visual unit tests allure report" src="https://user-images.githubusercontent.com/2823336/52945569-b0fe6700-337a-11e9-95e1-6ac624ef018b.png">
 
 Example project with Typescript/React.
 
