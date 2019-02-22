@@ -43,6 +43,7 @@
     "@types/puppeteer": "^1.12.1",
     "@types/selenium-standalone": "^6.15.0",
     "@types/webdriverio": "^5.0.0",
+    "@wdio/browserstack-service": "^5.6.0",
     "jest-allure": "^0.1.1",
     "jest-allure-image-snapshot": "0.0.10",
     "puppeteer": "1.11.0",

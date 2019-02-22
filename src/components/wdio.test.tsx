@@ -29,6 +29,9 @@ afterAll(async () => {
 
 beforeEach(async () => {
     browser = await webdriverio.remote({
+        user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
+        key: process.env.BROWSERSTACK_KEY || 'BROWSERSTACK_KEY',
+        hostname: "hub-cloud.browserstack.com",
         capabilities: {
             browserName: process.env.BROWSER_NAME || "chrome",
         },
