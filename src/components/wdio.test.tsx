@@ -1,31 +1,10 @@
 import React from "react";
-import * as selenium from "selenium-standalone";
 import * as webdriverio from "webdriverio";
 import App from "./App";
 import { htmlForScreenshot } from "../utils/testUtils";
 import { mount } from "enzyme";
 
-let seleniumProcess: any;
 let browser: any;
-
-beforeAll(async () => {
-    await new Promise(resolve => {
-        selenium.install(resolve);
-    });
-    seleniumProcess = await new Promise((resolve, reject) =>
-        selenium.start((error, childProcess) => {
-            if (error) {
-                reject(error);
-            } else {
-                resolve(childProcess);
-            }
-        })
-    );
-});
-
-afterAll(async () => {
-    await seleniumProcess.kill();
-});
 
 beforeEach(async () => {
     const capabilities = {
@@ -58,6 +37,8 @@ describe("WDIO", () => {
         await browser.setWindowRect(null, null, 375, 675);
 
         await browser.execute(function (html: string) {
+
+            // es5! as will be executed in browser context
             var HTMLElement = document.querySelector("html");
             if (HTMLElement) {
                 HTMLElement.innerHTML = html;
