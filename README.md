@@ -4,9 +4,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-![GitHub followers](https://img.shields.io/github/followers/zaqqaz.svg?style=social)
-![GitHub stars](https://img.shields.io/github/stars/zaqqaz/visual-unit-tests.svg?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/zaqqaz/visual-unit-tests.svg?style=social)
+[![GitHub followers](https://img.shields.io/github/followers/zaqqaz.svg?style=social)](https://github.com/zaqqaz)
+[![GitHub stars](https://img.shields.io/github/stars/zaqqaz/visual-unit-tests.svg?style=social)](https://github.com/zaqqaz/visual-unit-tests/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/zaqqaz/visual-unit-tests.svg?style=social)](https://github.com/zaqqaz/visual-unit-tests/watchers)
 
 Demo project with Typescript/React/Jest.
 
