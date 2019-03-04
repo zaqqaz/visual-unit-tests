@@ -1,6 +1,12 @@
 # How to set up a pipeline with visual unit tests for your application
 
 [![CircleCI](https://circleci.com/gh/zaqqaz/visual-unit-tests/tree/master.svg?style=svg)](https://circleci.com/gh/zaqqaz/visual-unit-tests/tree/master)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+![GitHub followers](https://img.shields.io/github/followers/zaqqaz.svg?style=social)
+![GitHub stars](https://img.shields.io/github/stars/zaqqaz/visual-unit-tests.svg?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/zaqqaz/visual-unit-tests.svg?style=social)
 
 Demo project with Typescript/React/Jest.
 
