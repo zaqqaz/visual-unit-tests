@@ -1,4 +1,8 @@
-# Evolution Gaming Engineering
+<h1 align="center">Evolution Gaming Engineering</h1>
+
+<p align="center" style="font-size: 30px;">
+    <img width="500" src="https://user-images.githubusercontent.com/2823336/53955803-9817e480-40e2-11e9-9c71-598b2b3c89e3.png">
+</p>
 
 [![CircleCI](https://circleci.com/gh/evolution-gaming/evoneering/tree/master.svg?style=svg)](https://circleci.com/gh/evolution-gaming/evoneering/tree/master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -7,7 +11,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/evolution-gaming/evoneering.svg?style=social)](https://github.com/evolution-gaming/evoneering/stargazers)
 [![GitHub watchers](https://img.shields.io/github/watchers/evolution-gaming/evoneering.svg?style=social)](https://github.com/evolution-gaming/evoneering/watchers)
 
-## Useful links
+### Useful links
 
 - [Evolution Gaming on Github](https://github.com/evolution-gaming) - Scala, JavaScript, TypeScript, Erlang, Java and more.
 
@@ -19,6 +23,7 @@
 
 - [Our Engineers on Conferences (EN/RU)](https://www.youtube.com/playlist?list=PLSZSH9SHd-WD8SVS2TBI9UaHpFypkipXy) - Evolution Engineering speakers (both current and alumni) engage the audience in various georgaphies and present topics on Scala, JavaScript, QA Automation and other technical domains.
 
+<hr>
 
 ### Available Scripts
 

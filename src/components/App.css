@@ -1,23 +1,179 @@
 .App {
-    display: flex;
     height: 100%;
-    flex-direction: column;
-}
-
-.Content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.BurgerContainer {
     width: 100%;
 }
 
-.HotDogContainer {
+.contentContainer {
+    width: 65%;
+    min-width: 957px;
+}
+
+.topBarContainer {
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mainInfoContainer {
+    background: black;
+    min-height: 500px;
+    padding-top: 184px;
+    display: flex;
+    justify-content: center;
+}
+
+.slogan {
+    font-size: 30px;
+    font-weight: 900;
+    width: 70%;
+    color: #fff;
+}
+
+.tags {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.tags div {
+    margin: 6px;
+}
+
+.socialContainer {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialContainer svg {
+    height: 100%;
+}
+
+.socialContainer a {
+    display: flex;
+    height: 14px;
+}
+
+.ossContainer {
+    background: #FAFAFA;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.ossContainer .slogan {
+    color: #000000;
+    margin-top: 100px;
+    margin-bottom: 65px;
+    width: 40%;
+}
+
+.ossItem {
+    border: 1px #E1E5F4 solid;
+    height: 100px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoContainer {
+    background: #000000;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.videoContainer .slogan {
+    margin-top: 100px;
+    margin-bottom: 65px;
+}
+
+.videoItem {
+    display: inline-block;
+    height: 450px;
+    width: 49%;
+    background: #fff;
+    margin-bottom: 2%;
+
+}
+
+.videoItem:nth-of-type(even) {
+    margin-right: 2%;
+}
+
+.highlightContainer {
+    background: #000;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+}
+
+.highlightContainer .contentContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.highlightItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.highlightNumber {
+    font-size: 145px;
+    color: #fff;
+    font-weight: 900;
+}
+
+.highlightTitle {
+    font-size: 14px;
+    color: #B3B3B3;
+}
+
+.mapContainer {
+    background: #fff;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.mapContainer .slogan {
+    color: #000;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.buttons .Button {
+    flex: 1 0 18%;
+    margin: 5px;
     text-align: center;
-    font-size: 40px;
-    font-weight: 100;
+}
+
+.footerContainer {
+    height: 80px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.footerContainer .contentContainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FAFAFA;
+    font-weight: 200;
 }

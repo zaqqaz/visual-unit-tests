@@ -1,11 +1,47 @@
 .TopBar {
-    background: #fff;
+    margin-top: 44px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
-    height: 10vh;
     font-size: 24px;
     display: flex;
-    justify-content: center;
     align-items: center;
     font-weight: 300;
     text-transform: uppercase;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.navigationContainer {
+    display: flex;
+}
+
+.logoContainer {
+    height: 80px;
+    width: 200px;
+}
+
+.logoContainer svg {
+    width: 100%;
+    height: 100%;
+}
+
+.navigationContainer {
+    width: 60%;
+    display: flex;
+}
+
+.navigationContainer a {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.buttonContainer {
+    margin: 60px;
+    display: flex;
+    justify-content: center;
 }

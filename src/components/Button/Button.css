@@ -1,0 +1,28 @@
+.Button {
+    padding: 25px;
+    font-size: 12px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.Button.light {
+    color: #A0ABB8;
+    border: 1px solid #A0ABB8;
+}
+
+.Button.light:hover {
+    color: #FAFBFB;
+    background: #A0ABB8;
+}
+
+.Button.dark {
+    color: #FAFBFB;
+    background: #A0ABB8;
+}
+
+.Button.dark:hover {
+    color: #A0ABB8;
+    border: 1px solid #A0ABB8;
+    background: transparent;
+}
