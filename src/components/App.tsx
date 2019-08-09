@@ -18,13 +18,13 @@ class App extends React.PureComponent {
                 <div className={"Content"}>
                     <div className={"BurgerContainer"}>
                         {activeItem === BottomBarItems.HotDog && (
-                            <div className={"HotDogContainer"}>Just a hot dog
+                            <div className={"HotDogContainer"}>Just a visual unit test
                                 <HotDog/>
                             </div>
                         )}
                         {activeItem === BottomBarItems.Burger && <Burger/>}
                         {activeItem === BottomBarItems.Taco && (
-                            <div>A taco (/ˈtɑːkoʊ/, UK also /ˈtækoʊ/, Spanish: [ˈtako]) is a traditional Mexican dish
+                            <div>Мексиканская шаурма (/ˈtɑːkoʊ/, UK also /ˈtækoʊ/, Spanish: [ˈtako]) is a traditional Mexican dish
                                 consisting of a corn or wheat tortilla folded or rolled around a filling. A taco can be
                                 made with a variety of fillings, including beef, pork, chicken, seafood, vegetables, and
                                 cheese, allowing great versatility and variety. Tacos are generally eaten without
