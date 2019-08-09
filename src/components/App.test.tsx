@@ -7,6 +7,7 @@ const deviceDimensions = {
     pageWidth: 375,
     pageHeight: 667,
 };
+
 describe("App", () => {
     it("Screenshot of the whole app [hotDog]", async () => {
         const app = mount(<App/>);
