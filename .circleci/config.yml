@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  allure: ayte/allure@0.1.2
+  allure: ryanisnan/allure@0.1.2
 jobs:
   updateSnapshot:
     docker:
