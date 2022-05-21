@@ -1,9 +1,5 @@
-import Adapter from "enzyme-adapter-react-16";
-import { configure } from "enzyme";
 import { registerAllureImageSnapshot } from "jest-allure-image-snapshot";
 import "jest-allure/dist/setup";
-
-configure({ adapter: new Adapter() });
 
 registerAllureImageSnapshot({
     // we should store screenshots in different directories

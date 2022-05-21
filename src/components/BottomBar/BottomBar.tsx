@@ -15,34 +15,32 @@ export interface BottomBarProps {
     onClick: (item: BottomBarItems) => void;
 }
 
-export class BottomBar extends React.PureComponent<BottomBarProps> {
-    public render() {
-        const { activeItem, onClick } = this.props;
+export const BottomBar: React.FC<BottomBarProps> = (props) => {
+    const { activeItem, onClick } = props;
 
-        return (
-            <div className={"BottomBar"}>
-                <div
-                    data-button="HotDog"
-                    className={"BottomBarItem " + (activeItem === BottomBarItems.HotDog && "active")}
-                    onClick={() => onClick(BottomBarItems.HotDog)}
-                >
-                    <HotDog/>
-                </div>
-                <div
-                    data-button="Burger"
-                    className={"BottomBarItem " + (activeItem === BottomBarItems.Burger && "active")}
-                    onClick={() => onClick(BottomBarItems.Burger)}
-                >
-                    <Burger/>
-                </div>
-                <div
-                    data-button="Taco"
-                    className={"BottomBarItem " + (activeItem === BottomBarItems.Taco && "active")}
-                    onClick={() => onClick(BottomBarItems.Taco)}
-                >
-                    <Taco/>
-                </div>
+    return (
+        <div className={"BottomBar"}>
+            <div
+                data-button="HotDog"
+                className={"BottomBarItem " + (activeItem === BottomBarItems.HotDog && "active")}
+                onClick={() => onClick(BottomBarItems.HotDog)}
+            >
+                <HotDog />
             </div>
-        )
-    }
+            <div
+                data-button="Burger"
+                className={"BottomBarItem " + (activeItem === BottomBarItems.Burger && "active")}
+                onClick={() => onClick(BottomBarItems.Burger)}
+            >
+                <Burger />
+            </div>
+            <div
+                data-button="Taco"
+                className={"BottomBarItem " + (activeItem === BottomBarItems.Taco && "active")}
+                onClick={() => onClick(BottomBarItems.Taco)}
+            >
+                <Taco />
+            </div>
+        </div>
+    )
 }
