@@ -2,6 +2,7 @@ import puppeteer from "puppeteer";
 import path from "path";
 import mkdirp from "mkdirp";
 import fs from "fs";
+import { globalCss } from "./../components/GlobalStyle";
 
 export async function getBrowser() {
     const browser = await puppeteer.connect({
@@ -12,14 +13,14 @@ export async function getBrowser() {
 }
 
 export interface TakeScreenshotProps {
-    html: string;
+    html?: string;
     pageWidth?: number;
     pageHeight?: number;
     selector?: string;
     withHtml?: boolean;
 }
 
-export async function takeScreenshot(props: TakeScreenshotProps) {
+export async function takeScreenshot(props: TakeScreenshotProps = {}) {
     const {
         html,
         pageWidth = 800,
@@ -31,7 +32,7 @@ export async function takeScreenshot(props: TakeScreenshotProps) {
     const browser = await getBrowser();
     const page = await browser.newPage();
     await page.setViewport({ width: pageWidth, height: pageHeight });
-    const contentForScreenshot = htmlForScreenshot(html);
+    const contentForScreenshot = htmlForScreenshot(html || document.body.parentElement?.outerHTML!);
     await page.setContent(contentForScreenshot);
     const elementHandle = await page.$(selector);
 
@@ -52,11 +53,9 @@ export async function takeScreenshot(props: TakeScreenshotProps) {
     await page.close();
 }
 
-export function htmlForScreenshot(body: any) {
+export function htmlForScreenshot(body: string) {
     return `
         <html>
-        <head>
-            <style>${process.env.globalCss}</style>
             <style>
                 *,
                 *::after,
@@ -68,23 +67,9 @@ export function htmlForScreenshot(body: any) {
                     animation-play-state: paused !important;
                     caret-color: transparent !important;
                 }
-                * {
-                    padding: 0;
-                    margin: 0;
-                }
-                body, html {
-                    margin: 0;
-                    padding: 0;
-                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-                        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-                }
+                {globalCss}
             </style>
-        </head>
-        <body>
             ${body}
-        </body>
         </html>
     `;
 }

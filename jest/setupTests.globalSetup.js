@@ -3,7 +3,6 @@ const fs = require("fs");
 const glob = require("glob");
 
 module.exports = async function () {
-    const globalCss = await loadCss();
     const browser = await puppeteer.launch({
         headless: true,
         args: [
@@ -16,7 +15,6 @@ module.exports = async function () {
         ],
     });
 
-    process.env.globalCss = globalCss;
     process.env.__BROWSER_wsEndpoint__ = browser.wsEndpoint();
 };
 
