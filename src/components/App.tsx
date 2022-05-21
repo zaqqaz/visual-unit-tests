@@ -10,6 +10,10 @@ const Container = styled.div`
   display: flex;
   height: 100%;
   flex-direction: column;
+  
+  svg {
+    width: 100%;
+  }
 `;
 
 const Content = styled.div`

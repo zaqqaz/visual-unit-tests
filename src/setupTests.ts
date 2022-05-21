@@ -11,4 +11,3 @@ registerAllureImageSnapshot({
 const minutes = 10;
 jest.setTimeout(minutes * 60 * 1000);
 
-export default undefined;
