@@ -8,16 +8,18 @@
 [![GitHub stars](https://img.shields.io/github/stars/zaqqaz/visual-unit-tests.svg?style=social)](https://github.com/zaqqaz/visual-unit-tests/stargazers)
 [![GitHub watchers](https://img.shields.io/github/watchers/zaqqaz/visual-unit-tests.svg?style=social)](https://github.com/zaqqaz/visual-unit-tests/watchers)
 
-Demo project with Typescript/React/Jest.
+Demo project with Typescript/React/React Testing Library/Jest.
+
+FYI: Latest version of the project makes demo with styled-components, but you can see history (and attached videos) to discover options with css/pcss.
 
 **Features:**
  - Nice reports with [jest-allure](https://github.com/zaqqaz/jest-allure)
  - Screenshots tests with [puppeteer](https://github.com/GoogleChrome/puppeteer) & [jest-allure-image-snapshot](https://github.com/zaqqaz/jest-allure-image-snapshot)
  - CircleCi integration
  
-### [Presentation slides](https://denis.by/visual-tests/)
-<a href="https://denis.by/visual-tests/" target="_blank">
- <img width="450" src="https://user-images.githubusercontent.com/2823336/53030012-b808a080-3472-11e9-953c-a9c225e44e0b.png">
+### [Talk](https://denis.by/visual-tests/)
+<a href="https://www.youtube.com/watch?v=vHnCGTV08Os" target="_blank">
+ <img width="450" src="https://user-images.githubusercontent.com/2823336/169666095-fcc075c4-15fe-4f7a-9f25-6f1dae364e6e.png">
 </a>
 
 >During this talk we’ll discuss why we bet on visual unit tests. On a real example we’ll discover how to implement such tests for **React** application with **Jest** and **Puppeteer**, we’ll meet **Allure report** with Jest and in the end set up the full pipeline with **CircleCi** and GitHub to run our own visual tests on each pull request. Also we’ll consider performance and some tricky parts.
