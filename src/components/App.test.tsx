@@ -21,8 +21,8 @@ describe("App", () => {
 
     it("Screenshot of the whole app [Burger]", async () => {
         const { container } = render(<App />);
-        const burgerButton = container.querySelector(`[data-button="Burger"]`)!;
-        fireEvent.click(burgerButton);
+        const gyrosButton = container.querySelector(`[data-button="Gyros"]`)!;
+        fireEvent.click(gyrosButton);
 
         const screenShot = await takeScreenshot({
             ...deviceDimensions,

@@ -1,12 +1,12 @@
 import React from "react";
 import { HotDog } from "../HotDog/HotDog";
-import { Burger } from "../Burger/Burger";
 import { Taco } from "../Taco/Taco";
 import styled from "styled-components";
+import { Gyros } from "../Gyros/Gyros";
 
 export enum BottomBarItems {
     HotDog = "HotDog",
-    Burger = "Burger",
+    Gyros = "Gyros",
     Taco = "Taco",
 }
 
@@ -56,11 +56,11 @@ export const BottomBar: React.FC<BottomBarProps> = (props) => {
                 <HotDog />
             </Item>
             <Item
-                data-button="Burger"
-                active={activeItem === BottomBarItems.Burger}
-                onClick={() => onClick(BottomBarItems.Burger)}
+                data-button="Gyros"
+                active={activeItem === BottomBarItems.Gyros}
+                onClick={() => onClick(BottomBarItems.Gyros)}
             >
-                <Burger />
+                <Gyros />
             </Item>
             <Item
                 data-button="Taco"
