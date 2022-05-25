@@ -67,7 +67,7 @@ export function htmlForScreenshot(body: string) {
                     animation-play-state: paused !important;
                     caret-color: transparent !important;
                 }
-                {globalCss}
+                ${globalCss}
             </style>
             ${body}
         </html>
