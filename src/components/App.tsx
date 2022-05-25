@@ -5,6 +5,7 @@ import { BottomBar, BottomBarItems } from "./BottomBar/BottomBar";
 import { Burger } from "./Burger/Burger";
 import { HotDog } from "./HotDog/HotDog";
 import { GlobalStyle } from "./GlobalStyle";
+import { Gyros } from "./Gyros/Gyros";
 
 const Container = styled.div`
   display: flex;
@@ -36,7 +37,7 @@ export const App: React.FC = () => {
     return (
         <Container>
             <GlobalStyle />
-            <TopBar title={"HotDog Burger Taco"} />
+            <TopBar title={"HotDog Gyros Taco"} />
             <Content>
                 {activeItem === BottomBarItems.HotDog && (
                     <HotDogContainer>
@@ -44,7 +45,7 @@ export const App: React.FC = () => {
                         <HotDog />
                     </HotDogContainer>
                 )}
-                {activeItem === BottomBarItems.Burger && <Burger />}
+                {activeItem === BottomBarItems.Gyros && <Gyros />}
                 {activeItem === BottomBarItems.Taco && (
                     <div>A taco (/ˈtɑːkoʊ/, UK also /ˈtækoʊ/, Spanish: [ˈtako]) is a traditional Mexican dish
                         consisting of a corn or wheat tortilla folded or rolled around a filling. A taco can be

@@ -14,7 +14,7 @@ describe("BottomBar", () => {
     });
 
     it("Should look good [Burger]", async () => {
-        render(<BottomBar activeItem={BottomBarItems.Burger} onClick={noop} />);
+        render(<BottomBar activeItem={BottomBarItems.Gyros} onClick={noop} />);
         const screenShot = await takeScreenshot();
 
         expect(screenShot).toMatchImageSnapshot();
